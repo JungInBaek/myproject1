@@ -1,10 +1,6 @@
 # web
 
-## multicampus java full stack course
-
-# web
-
-## multicampus java full stack course
+## 멀티캠퍼스 백엔드 코스
 
 ### 웹 페이지 수업 파일
 
