@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/out0.css" />
+    <style>
+      td {
+        background-color: burlywood;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <form action="login">
+        <table>
+          <h3>로그인 화면</h3>
+          <tr align="center">
+            <td>아이디</td>
+            <td>
+              <input type="text" name="id" />
+            </td>
+          </tr>
+          <tr align="center">
+            <td>비밀번호</td>
+            <td>
+              <input type="password" name="pw" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <button>로그인</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+
+      <hr />
+
+      <form action="member">
+        <table>
+          <h3>회원가입 화면</h3>
+          <tr>
+            <td align="right">아이디</td>
+            <td>
+              <input type="text" name="id" />
+            </td>
+          </tr>
+          <tr>
+            <td align="right">비밀번호</td>
+            <td>
+              <input type="password" name="pw" />
+            </td>
+          </tr>
+          <tr>
+            <td align="right">이름</td>
+            <td>
+              <input type="text" name="name" />
+            </td>
+          </tr>
+          <tr>
+            <td align="right">성별</td>
+            <td>
+              <input type="radio" name="gender" value="male" checked />남
+              <input type="radio" name="gender" value="female" />여
+            </td>
+          </tr>
+          <tr>
+            <td align="right">생년월일</td>
+            <td>
+              <input type="date" />
+            </td>
+          </tr>
+          <tr>
+            <td align="right">취미</td>
+            <td>
+              <input type="checkbox" name="hobby" value="running" />달리기
+              <input type="checkbox" name="hobby" value="youtube" />유튜브
+              <input type="checkbox" name="hobby" value="internet" />인터넷서핑
+            </td>
+          </tr>
+          <tr>
+            <td align="right">통신사</td>
+            <td>
+              <select name="operator" id="">
+                <option value="kt" selected>KT</option>
+                <option value="skt">SKT</option>
+                <option value="LGU">LGT</option>
+                <option value="etc">알뜰폰</option>
+              </select>
+              <input type="text" name="phone" />
+            </td>
+          </tr>
+          <tr align="center">
+            <td colspan="2">자기소개</td>
+          </tr>
+          <tr align="center">
+            <td colspan="2">
+              <textarea
+                name="introduce"
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="300자 이내"
+              ></textarea>
+            </td>
+          </tr>
+          <tr align="center">
+            <td colspan="2" style="background-color: chocolate">
+              <button>회원가입</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </center>
+  </body>
+</html>
