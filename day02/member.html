@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td {
+        background-color: burlywood;
+        color: white;
+        font-weight: bold;
+      }
+
+      div {
+        font-size: 15px;
+        font-weight: bold;
+        color: blue;
+      }
+
+      #total {
+        width: 100%;
+        height: 800px;
+        background-color: aquamarine;
+      }
+
+      #top {
+        width: 100%;
+        height: 100px;
+        background-color: limegreen;
+        padding: 2px;
+      }
+
+      #top2 {
+        background-color: black;
+        color: yellow;
+        border-radius: 100px 10px;
+        width: 200px;
+        height: 400px;
+        position: fixed;
+        top: 150px;
+        right: 50px;
+      }
+
+      #center {
+        width: 100%;
+        height: 500px;
+        padding: 30px;
+      }
+
+      li {
+        display: inline;
+        float: left;
+        padding: 10px;
+        width: 70px;
+        height: 20px;
+        text-align: center;
+        border-radius: 50px;
+      }
+
+      li:nth-child(2n) {
+        background-color: orange;
+      }
+
+      li:nth-child(2n + 1) {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="total">
+      <div id="top">
+        <ul>
+          <li>
+            <a href="member.html">회원가입</a>
+          </li>
+          <li>
+            <a href="product.html">제품정보</a>
+          </li>
+          <li>
+            <a href="bbs.html">게시판</a>
+          </li>
+          <li>
+            <a href="basket.html">장바구니</a>
+          </li>
+        </ul>
+      </div>
+      <div id="top2">장바구니</div>
+      <div id="center">
+        <center>
+          <form action="member">
+            <table>
+              <h3>회원가입 화면</h3>
+              <tr>
+                <td align="right">아이디</td>
+                <td>
+                  <input type="text" name="id" />
+                </td>
+              </tr>
+              <tr>
+                <td align="right">비밀번호</td>
+                <td>
+                  <input type="password" name="pw" />
+                </td>
+              </tr>
+              <tr>
+                <td align="right">이름</td>
+                <td>
+                  <input type="text" name="name" />
+                </td>
+              </tr>
+              <tr>
+                <td align="right">성별</td>
+                <td>
+                  <input type="radio" name="gender" value="male" checked />남
+                  <input type="radio" name="gender" value="female" />여
+                </td>
+              </tr>
+              <tr>
+                <td align="right">생년월일</td>
+                <td>
+                  <input type="date" />
+                </td>
+              </tr>
+              <tr>
+                <td align="right">취미</td>
+                <td>
+                  <input type="checkbox" name="hobby" value="running" />달리기
+                  <input type="checkbox" name="hobby" value="youtube" />유튜브
+                  <input
+                    type="checkbox"
+                    name="hobby"
+                    value="internet"
+                  />인터넷서핑
+                </td>
+              </tr>
+              <tr>
+                <td align="right">통신사</td>
+                <td>
+                  <select name="operator" id="">
+                    <option value="kt" selected>KT</option>
+                    <option value="skt">SKT</option>
+                    <option value="LGU">LGT</option>
+                    <option value="etc">알뜰폰</option>
+                  </select>
+                  <input type="text" name="phone" />
+                </td>
+              </tr>
+              <tr align="center">
+                <td colspan="2">자기소개</td>
+              </tr>
+              <tr align="center">
+                <td colspan="2">
+                  <textarea
+                    name="introduce"
+                    id=""
+                    cols="30"
+                    rows="10"
+                    placeholder="300자 이내"
+                  ></textarea>
+                </td>
+              </tr>
+              <tr align="center">
+                <td colspan="2" style="background-color: chocolate">
+                  <button>회원가입</button>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </center>
+      </div>
+    </div>
+  </body>
+</html>
