@@ -1,0 +1,15 @@
+#thead {
+  background-color: limegreen;
+}
+#tbtn {
+  background-color: yellowgreen;
+}
+#btn {
+  background-color: yellow;
+}
+#btn:hover {
+  background-color: blueviolet;
+}
+input {
+  background-color: blanchedalmond;
+}
