@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#btn1").click(function () {
+          let price = $("#price").val();
+          let payment = $("#payment").val();
+
+          if (payment == "계좌이체") {
+            price = parseInt(price) * 0.8;
+          } else if (payment == "신용카드") {
+            price = parseInt(price) * 0.9;
+          } else if (payment == "휴대폰결제") {
+            price = parseInt(price);
+          }
+
+          $("#result").append("결제금액 : <div>" + price + "</div>");
+        });
+
+        $("#btn2").click(function () {
+          let idValue = $("#id").val();
+
+          if (idValue == "apple" || idValue == "root") {
+            result = "중복된 아이디입니다.";
+          } else {
+            result = "사용가능한 아이디입니다.";
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    결제금액 : <input type="text" id="price" /><br />
+    1)계좌이체, 2)신용카드, 3)휴대폰결제 결제수단 :
+    <input type="text" id="payment" />
+    <button id="btn1">결제하기</button>
+    <hr />
+    회원가입할 아이디 입력 : <input type="text" id="id" />
+    <button id="btn2">아이디 중복확인</button>
+    <hr />
+    인증받을 전화번호 입력 : <input type="text" id="phone" />
+    <button id="btn3">인증번호 받기</button>
+    <hr />
+    <div id="result"></div>
+  </body>
+</html>

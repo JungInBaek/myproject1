@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery UI Effects - Toggle Demo</title>
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $("#all").click(function () {
+          let flag = false;
+
+          if (flag) {
+            $(".check").prop("checked", false);
+            flag = false;
+          } else {
+            $(".check").prop("checked", true);
+            flag = true;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="checkbox" id="all" class="check" />
+      전체동의
+    </div>
+
+    <div>
+      <input type="checkbox" id="" class="check" />
+      네이버 이용약관 동의(필수)
+    </div>
+
+    <div>
+      <input type="checkbox" id="" class="check" />
+      개인정보 수집 및 이용 동의(필수)
+    </div>
+
+    <div>
+      <input type="checkbox" id="" class="check" />
+      위치기반서비스 이용약관 동의(선택)
+    </div>
+
+    <div>
+      <input type="checkbox" id="" class="check" />
+      프로모션 정보 수신 동의(선택)
+    </div>
+
+    <button id="cancel-btn" class="">취소</button>
+    <button id="confirm-btn" class="">확인</button>
+  </body>
+</html>

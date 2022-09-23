@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#b1").click(function () {
+          //  입력
+          let idValue = $("#id").val(); //  test
+
+          //  처리
+          if (idValue.length < 5) {
+            // $("#result").html("<span style='color:red'>5글자 미만</span>");
+            $("#result").append(
+              "<span style='color:red'>5글자 미만</span><br />"
+            );
+          } else {
+            // $("#result").html("<span style='color:red'>유효한 아이디</span>");
+            $("#result").append(
+              "<span style='color:green'>유효한 아이디</span><br />"
+            );
+          }
+
+          //  출력
+        });
+
+        $("#b2").click(function () {
+          //  입력
+          let pwValue1 = $("#pw1").val(); //  1234;
+          let pwValue2 = $("#pw2").val(); //  1234;
+
+          //  처리
+          if (pwValue1 != pwValue2) {
+            $("#result").append(
+              "<span style='color:red'>비밀번호가 일치하지 않습니다.</span>"
+            );
+          } else {
+            $("#result").append(
+              "<span style='color:green'>비밀번호가 일치합니다.</span>"
+            );
+          }
+
+          //  출력
+        });
+      });
+    </script>
+  </head>
+  <body>
+    아이디 : <input type="text" id="id" value="test" /><br />
+    <button id="b1">아이디 확인</button>
+    <hr />
+    비밀번호 : <input type="password" id="pw1" value="1234" /><br />
+    비밀번호 확인 : <input type="password" id="pw2" value="1234" /><br />
+    <button id="b2">비밀번호 일치 확인</button>
+    <hr />
+    <div id="result"></div>
+  </body>
+</html>
